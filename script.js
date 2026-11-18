@@ -16,6 +16,21 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Волна на кнопках: круг из точки клика
+  document.querySelectorAll(".btn").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      var rect = btn.getBoundingClientRect();
+      var size = Math.max(rect.width, rect.height);
+      var ripple = document.createElement("span");
+      ripple.className = "ripple";
+      ripple.style.width = ripple.style.height = size + "px";
+      ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+      ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+      btn.appendChild(ripple);
+      ripple.addEventListener("animationend", function () { ripple.remove(); });
+    });
+  });
+
   // Звёздное поле: случайные четырёхлучевые звёзды, мерцают с разной задержкой
   var starsBox = document.getElementById("stars");
   if (starsBox) {
