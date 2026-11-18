@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ателье сайтов — создаю сайты по вашему желанию и вашим требованиям</title>
+  <meta name="description" content="Создаю сайты по вашему желанию и вашим требованиям: лендинги, корпоративные сайты, поддержка проектов. Обсудим вашу задачу." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SVG-символ: четырёхлучевая звезда из фирменного стиля -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="star" viewBox="0 0 24 24">
+      <path d="M12 1 C 12.8 7, 14 9.2, 23 12 C 14 14.8, 12.8 17, 12 23 C 11.2 17, 10 14.8, 1 12 C 10 9.2, 11.2 7, 12 1 Z" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <!-- ШАПКА -->
+  <header class="header" id="top">
+    <div class="header-inner">
+      <a class="logo" href="#top">
+        <span class="logo-crest"><img src="assets/atelie_saitov_logo.png" alt="" /></span>
+        <span class="logo-word" data-brand>Ателье сайтов</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="header-cta" href="#contacts">Обсудить проект</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero">
+      <div class="stars" id="stars" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="crest">
+          <img src="assets/atelie_saitov_logo.png" alt="Логотип «Ателье сайтов» — игла с ниткой и курсор" />
+        </div>
+        <p class="hero-kicker">Сайты на заказ, сшитые по мерке</p>
+        <h1 class="hero-title">
+          <span class="line">Создаю сайты</span>
+          <span class="line">по вашему желанию</span>
+          <span class="line">и вашим требованиям</span>
+        </h1>
+        <p class="hero-sub">Работаю один на один с заказчиком: слушаю, предлагаю, делаю. Без шаблонов и лишних слов — сайт, который решает вашу задачу.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contacts">Обсудить проект</a>
+          <a class="btn btn-ghost" href="#services">Смотреть услуги</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section class="services" id="services">
+      <div class="section-head">
+        <h2 class="section-title">Что я делаю</h2>
+        <p class="section-note">Три направления, в которых я уверенно работаю. Если вашей задачи нет в списке — напишите, разберёмся вместе.</p>
+      </div>
+
+      <ul class="service-list">
+        <li class="service">
+          <div class="service-main">
+            <h3 class="service-name">Лендинги</h3>
+            <p class="service-desc">Одностраничный сайт для рекламы продукта, услуги или события. Быстро запускается, сразу продаёт.</p>
+          </div>
+          <div class="service-meta">
+            <span class="service-time">от 2 недель</span>
+            <a class="service-link" href="#contacts" data-service="Лендинг">Заказать лендинг</a>
+          </div>
+        </li>
+        <li class="service">
+          <div class="service-main">
+            <h3 class="service-name">Корпоративные сайты</h3>
+            <p class="service-desc">Многостраничный сайт компании: о вас, услуги, портфолио, контакты. Основа вашего присутствия в интернете.</p>
+          </div>
+          <div class="service-meta">
+            <span class="service-time">от 4 недель</span>
+            <a class="service-link" href="#contacts" data-service="Корпоративный сайт">Заказать сайт</a>
+          </div>
+        </li>
+        <li class="service">
+          <div class="service-main">
+            <h3 class="service-name">Поддержка</h3>
+            <p class="service-desc">Обновляю контент, чиню ошибки, слежу за работой сайта, чтобы вы занимались бизнесом, а не техническими делами.</p>
+          </div>
+          <div class="service-meta">
+            <span class="service-time">помесячно</span>
+            <a class="service-link" href="#contacts" data-service="Поддержка">Обсудить поддержку</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="contacts" id="contacts">
+      <div class="section-head">
+        <h2 class="section-title">Свяжитесь со мной</h2>
+        <p class="section-note">Напишите пару слов о своей задаче — отвечу в течение дня и предложу, как её решить.</p>
+      </div>
+
+      <ul class="contact-list" id="contact-list">
+        <!-- Контакты подставляются из config.js — меняйте их там -->
+      </ul>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <label class="form-field">
+            <span>Ваше имя</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label class="form-field">
+            <span>Телефон или e-mail</span>
+            <input type="text" name="reply" autocomplete="email" required />
+          </label>
+        </div>
+        <label class="form-field">
+          <span>О чём сайт?</span>
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <div class="form-footer">
+          <button class="btn btn-primary" type="submit">Отправить заявку</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer-logo" src="assets/atelie_saitov_logo_header.png" alt="Ателье сайтов" />
+    <p class="footer-copy">© <span id="year"></span> · Сайт создан с нуля, без шаблонов</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

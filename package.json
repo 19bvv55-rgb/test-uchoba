@@ -1,0 +1,9 @@
+{
+  "name": "landing-sites-v2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лендинг «Ателье сайтов» — версия 2 (фирменный стиль бренда)",
+  "scripts": {
+    "dev": "node server.js"
+  }
+}
