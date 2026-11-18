@@ -18,6 +18,22 @@
 
   // Волна на кнопках: круг из точки клика
   document.querySelectorAll(".btn").forEach(function (btn) {
+    // Мерцающие зелёные звёздочки по краям кнопки
+    [{ left: "8%", top: "12%", size: 9 }, { right: "9%", bottom: "14%", size: 11 }].forEach(function (p) {
+      var star = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      star.setAttribute("class", "btn-star");
+      star.setAttribute("width", p.size);
+      star.setAttribute("height", p.size);
+      if (p.left) star.style.left = p.left;
+      if (p.right) star.style.right = p.right;
+      if (p.top) star.style.top = p.top;
+      if (p.bottom) star.style.bottom = p.bottom;
+      star.style.setProperty("--dur", (1.6 + Math.random() * 1.6).toFixed(2) + "s");
+      star.style.setProperty("--delay", (Math.random() * 2.5).toFixed(2) + "s");
+      star.innerHTML = '<use href="#star"></use>';
+      btn.appendChild(star);
+    });
+
     btn.addEventListener("click", function (e) {
       var rect = btn.getBoundingClientRect();
       var size = Math.max(rect.width, rect.height);
